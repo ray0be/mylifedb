@@ -1,0 +1,16 @@
+{
+    "name": "ray0be/mylifedb",
+    "description": "Your life's database",
+    "type": "project",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "ray0be"
+        }
+    ],
+    "require": {
+        "voku/html-min": "^3.0",
+        "matthiasmullie/minify": "^1.3",
+        "leafo/scssphp": "^0.7.7"
+    }
+}

@@ -1,3 +1,3 @@
-# mylifedb
+# myLife db
 
 Hello world.
