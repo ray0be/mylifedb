@@ -1,0 +1,24 @@
+<header>
+    <div class="container grid-xl">
+        <div class="title">
+            <router-link to="/">myLife db</router-link>
+        </div>
+        <div class="right">
+            <router-link to="/settings"><span class="icon icon_cog"></span></router-link>
+            <span class="username">{{ db.settings.username }}</span>
+            &bull;
+            <span v-if="db.stats.ls_maxsize !== null" class="tooltip tooltip-bottom" :data-tooltip="used_size()">
+                <progress class="progress" v-bind:value="other.db_size" v-bind:max="db.stats.ls_maxsize"></progress>
+                {{ Math.floor((other.db_size / db.stats.ls_maxsize) * 100) }}%
+            </span>
+            <span v-else>
+                <router-link to="/">Take Storage test</router-link>
+            </span>
+            <span v-if="db.stats.last_save !== null">
+                &bull;
+                {{ other.last_save_message }}
+            </span>
+        </div>
+    </div>
+    <div v-bind:class="'border bg-' + db.settings.color"></div>
+</header>

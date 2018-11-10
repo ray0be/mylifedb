@@ -1,0 +1,49 @@
+<div class="content">
+    <h2>Welcome!</h2>
+
+    <p>Hi ! Welcome to your personal database.</p>
+
+    
+    <h3>What is it ?</h3>
+
+    <p>Here, you can store your thoughts, information, etc., by creating documents, todo-lists, memos...<br>Whatever you want, in text format.</p>
+    <p>Let's take an example. Imagine you have a huge library, you need something to store information about books, their place in the shelves, etc. It is possible to use this database to do so. Another example : You are used to writing your thoughts on paper during home-to-work transportation, because your write poems. Now you can forget paper.</p>
+
+
+    <h3>How does it work ?</h3>
+
+    <p>This tool allows you to create an unlimited number of &laquo;&nbsp;items&nbsp;&raquo;. A book, for instance, is an <strong>item</strong>.</p>
+    <p>Each item belongs to a &laquo;&nbsp;<strong>collection</strong>&nbsp;&raquo;, e.g.: Books.</p>
+
+    <p class="text-center"><img src="data:image/png;base64,<?= base64_encode(file_get_contents('app/img/how-it-works.png')) ?>" alt="How it works?"/></p>
+
+    <p>When your database becomes important, you can even categorize your collections by splitting them into different categories.</p>
+
+
+    <h3>Completely offline</h3>
+
+    <p>The program does not rely on a remote storage system&nbsp;: everything is stored in your web browser&nbsp;!</p>
+    <p>Once you have loaded this web page (alright if you're reading this), you can use the database and relax because nothing will be send over internet : no external script from untrusted source included, no communication between the webpage and the server. You can even download this HTML web page (Ctrl+S), save it to your disk, and use it as a program that you open in the browser.</p>
+
+
+    <h3>Easy</h3>
+
+    <p>No registration.</p>
+    <p>Free. <a href="https://github.com/ray0be/mylifedb" target="blank">OpenSource</a>.</p>
+    
+    <div style="margin:40px 0;text-align:center;">
+        <router-link tag="button" to="/create-collection" class="btn btn-primary btn-lg">Create a collection</router-link>
+    </div>
+
+    <h3>Technical information</h3>
+
+    <h5>Storage</h5>
+    <p>The data is stored in your browser's localStorage. The maximum size available then depends on the browser. Normally, it would be <strong>5MB</strong>. Note that the data will only be available in the browser you use to save it. If you change your web browser, remember you will lose the data.</p>
+    <p><button class="btn btn-sm">Take the test!</button> To know what is the maximum size of your database with this browser.</p>
+    
+    <h5>Compression</h5>
+    <p>The tool uses gzip to compress the data. This allows you to store more data.</p>
+    
+    <h5>Security</h5>
+    <p>If you're concerned about confidentiality, note that it's possible to choose a password to encrypt the data (<router-link to="/settings">settings</router-link>). Accessing the database will be possible only after having entered the correct password. Note that if you forget the password, you won't be able to retrieve the data.</p>
+</div>

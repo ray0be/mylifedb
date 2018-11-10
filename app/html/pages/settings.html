@@ -1,0 +1,33 @@
+<div class="content">
+    <h2>Settings</h2>
+
+    <div class="form-group">
+        <label class="form-label" for="settings_name">Name</label>
+        <input class="form-input" v-model="router.app.db.settings.username" type="text" id="settings_name" placeholder="Patrick" @blur="save()">
+    </div>
+    <div class="form-group">
+        <label class="form-label">User Interface Color</label>
+        <label class="form-radio form-inline">
+            <input type="radio" name="color" value="blue" v-model="router.app.db.settings.color" @change="save()"><i class="form-icon"></i> <span class="colorsquare bg-blue"></span>
+        </label>
+        <label class="form-radio form-inline">
+            <input type="radio" name="color" value="green" v-model="router.app.db.settings.color" @change="save()"><i class="form-icon"></i> <span class="colorsquare bg-green"></span>
+        </label>
+        <label class="form-radio form-inline">
+            <input type="radio" name="color" value="brown" v-model="router.app.db.settings.color" @change="save()"><i class="form-icon"></i> <span class="colorsquare bg-brown"></span>
+        </label>
+        <label class="form-radio form-inline">
+            <input type="radio" name="color" value="red" v-model="router.app.db.settings.color" @change="save()"><i class="form-icon"></i> <span class="colorsquare bg-red"></span>
+        </label>
+        <label class="form-radio form-inline">
+            <input type="radio" name="color" value="purple" v-model="router.app.db.settings.color" @change="save()"><i class="form-icon"></i> <span class="colorsquare bg-purple"></span>
+        </label>
+        <label class="form-radio form-inline">
+            <input type="radio" name="color" value="black" v-model="router.app.db.settings.color" @change="save()"><i class="form-icon"></i> <span class="colorsquare bg-black"></span>
+        </label>
+    </div>
+    
+    <h3 style="margin-top:50px;">Secure Database Access</h3>
+    <p>By default your database is fully available when you visit this page with your browser (the data is saved in your browser). You may add a password to protect your information. If you do this, when you'll arrive on the page it will ask you to enter the code.</p>
+    <p style="font-size:xx-large;">// TODO ...</p>
+</div>

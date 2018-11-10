@@ -13,40 +13,33 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,600,900">
     </head>
     <body>
-        <div id="root">
-            <header>
-                <div class="container grid-xl">
-                    <div id="title"><a href="">myLife db</a></div>
-                </div>
-                <div class="border bg-purple"></div>
-            </header>
+        <!-- Vue.js -->
+        <script>
+        <?php require 'app/js/js_before.php'; ?>
+        </script>
+
+        <div id="root" v-bind:class="'links-' + db.settings.color">
+            <?php include 'app/html/header.html'; ?>
 
             <div class="container grid-xl">
                 <div class="columns">
-                    <nav id="nav" class="column col-3">
-                        <div class="hidden-xs block">
-                            <div class="title border-purple">My collections</div>
-                            <div class="content">
-                                <p>There are no collection. <a href="">Create</a></p>
-                            </div>
-                        </div>
-                    </nav>
-                    <div id="page" class="block column col-12 col-9">
-                        <div id="page-header" class="content">
-                            
-                            <h2>Hi Jeanne&nbsp;!</h2>
-                            <p>This is your dashboard.</p>
+                    <?php include 'app/html/nav.html'; ?>
 
+                    <div class="column col-md-12 col-9">
+                        <div id="page" class="block">
+                            <?php include 'app/html/pages.php'; ?>
+                            
+                            <router-view></router-view>
                         </div>
-                        <div id="page-content" class="content">
-                            <?php require 'app/html/test.php'; ?>
-                        </div>
+                        <?php include 'app/html/footer.html'; ?>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Javascript -->
-        <script><?php require 'app/js/all_js.php'; ?></script>
+
+        <script>
+        "use strict";
+        <?php require 'app/js/js_after.php'; ?>
+        </script>
     </body>
 </html>
